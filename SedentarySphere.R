@@ -77,10 +77,9 @@ for(i in 1:nrow(data)) {
 
 #=======================Activity State=====================
 for(i in 1:nrow(data)) {
-  if(data[i,"Sleep 3"] == 1) {
+  if(data[i,"Sleep 3"] == 1)
     data[i, "Activity State"] <- "sleep"
-    data[i, "Posture"] <- "sit/lie"
-  } else if(data[i,"V8"] > 566)
+  else if(data[i,"V8"] > 566)
     data[i, "Activity State"] <- "vigorous"
   else if((data[i,"V8"] < 566) & (data[i,"V8"] > 202))
     data[i, "Activity State"] <- "moderate"
